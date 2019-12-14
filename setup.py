@@ -10,7 +10,7 @@ setup(
     author_email='nick.waterton@med.ge.com',
     url='https://github.com/NickWaterton/Roomba980-Python',
     packages=find_packages(),
-    install_requires=['numpy', 'opencv-python', 'paho-mqtt', 'pillow', 'six'],
+    install_requires=['paho-mqtt', 'six'],
     include_package_data=True,
     entry_points={
         'console_scripts': [
