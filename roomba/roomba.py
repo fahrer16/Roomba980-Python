@@ -156,7 +156,8 @@ class Roomba(object):
             self.debug = True
         self.address = address
         if not cert_name:
-            self.cert_name = "/etc/ssl/certs/ca-certificates.crt"
+            #self.cert_name = "/etc/ssl/certs/ca-certificates.crt"
+            self.cert_name = "/usr/local/share/certs/ca-root-nss.crt"
         else:
             self.cert_name = cert_name
         self.continuous = continuous
@@ -267,8 +268,7 @@ class Roomba(object):
             self.log.info("Setting TLS")
             try:
                 self.client.tls_set(
-                    #self.cert_name, cert_reqs=ssl.CERT_NONE,
-                    cert_reqs=ssl.CERT_NONE,
+                    self.cert_name, cert_reqs=ssl.CERT_NONE,
                     tls_version=ssl.PROTOCOL_TLS, ciphers='DEFAULT@SECLEVEL=1')
             except (ValueError, FileNotFoundError):   # try V1.3 version
                 self.log.warn("TLS Setting failed - trying 1.3 version")
