@@ -267,7 +267,8 @@ class Roomba(object):
             self.log.info("Setting TLS")
             try:
                 self.client.tls_set(
-                    self.cert_name, cert_reqs=ssl.CERT_NONE,
+                    #self.cert_name, cert_reqs=ssl.CERT_NONE,
+                    cert_reqs=ssl.CERT_NONE,
                     tls_version=ssl.PROTOCOL_TLS, ciphers='DEFAULT@SECLEVEL=1')
             except (ValueError, FileNotFoundError):   # try V1.3 version
                 self.log.warn("TLS Setting failed - trying 1.3 version")
