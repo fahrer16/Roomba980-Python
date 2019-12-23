@@ -6,7 +6,7 @@ setup(
     version='1.2.4',
     license='MIT',
     description='Python program and library to control iRobot Roomba 980 ' \
-    'Vacuum Cleaner for UDI ISY. Forked from project from Nick Waterton to ensure compatability is maintained',
+    'Vacuum Cleaner for UDI ISY. Forked from project from Nick Waterton to ensure compatibility is maintained',
     author_email='fahrer@gmail.com',
     url='https://github.com/fahrer16/Roomba980-Python',
     packages=find_packages(),
