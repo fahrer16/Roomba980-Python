@@ -156,8 +156,7 @@ class Roomba(object):
             self.debug = True
         self.address = address
         if not cert_name:
-            #self.cert_name = "/etc/ssl/certs/ca-certificates.crt"
-            self.cert_name = "/usr/local/share/certs/ca-root-nss.crt"
+            self.cert_name = "/etc/ssl/certs/ca-certificates.crt"
         else:
             self.cert_name = cert_name
         self.continuous = continuous
