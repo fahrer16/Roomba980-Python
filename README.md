@@ -5,9 +5,9 @@ Unofficial iRobot Roomba 980 python library (SDK).
 
 Thanks to https://github.com/koalazak/dorita980 where much of the inner workings were derived from.
 
-This is version 1.0 so it may be buggy!
 **NEW** Now version 1.1.2 - so it may be less buggy (or not)
 **NEW V1.2.3 10/10/2018** Added support for Roomba i7 password discovery
+**NEW V1.2.8 16/3/2020** Fix for pillow v7
 
 ## Advice
 If you enjoy python980 and it works well for you, I recommend blocking the internet access to your robot to avoid the OTA firmware updates. New firmware changes can cause python980 to stop working. Blocking firmware updates can be performed using the parental control options on your router.
@@ -190,6 +190,8 @@ python roomba.py
 ```
 
 Follow the instructions, the script will attempt to find the roomba, obtain the IP, blid, and password - then save these to a local configuration file. If this works, the program will then start displaying messages from your Roomba, and printing the master_state every few seconds. the results are logged to a log file (Roomba.log by default).
+
+**NOTE:** You may have to press and hold the HOME button on your robot until it plays a series of tones (about 2 seconds). Release the button and your robot will flash WIFI light to discover your Roomba.
 
 On future runs (Once successful), these values will be taken from the configuration file, so you only have to do this once. You can manually specify these on the command line, some example start up bash scripts are supplied.
 I advice you to experiment with the map size (if you are using maps), as that is the one variable that isn't totally automatic. the size, position of the dock etc depend on your house layout.
