@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='Roomba980-Python',
-    version='1.2.4',
+    version='1.2.5',
     license='MIT',
     description='Python program and library to control iRobot Roomba 980 ' \
     'Vacuum Cleaner for UDI ISY. Forked from project from Nick Waterton to ensure compatibility is maintained',
